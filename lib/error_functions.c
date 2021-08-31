@@ -95,3 +95,30 @@ void fatal(const char *format, ...)
     va_end(argList);
     terminate(TRUE);
 }
+
+void usageErr(const char *format, ...)
+{
+    va_list argList;
+
+    fflush(stdout);
+    fprintf(stderr, "Usage: ");
+    va_start(argList, format);
+    vfprintf(stderr, format, argList);
+    va_end(argList);
+
+    fflush(stderr);
+    exit(EXIT_FAILURE);
+}
+
+void cmdLineErr(const char *format, ...)
+{
+    va_list argList;
+    fflush(stdout);
+    fprintf(stderr, "Command-Line usage error: ");
+    va_start(argList, format);
+    vfprintf(stderr, format, argList);
+    va_end(argList);
+
+    fflush(stderr);
+    exit(EXIT_FAILURE);
+}
