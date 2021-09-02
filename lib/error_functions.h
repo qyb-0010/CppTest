@@ -5,7 +5,7 @@
 #ifndef CPPTEST_ERROR_FUNCTIONS_H
 #define CPPTEST_ERROR_FUNCTIONS_H
 
-void errorMsg(const char *format, ...)
+void errorMsg(const char *format, ...);
 
 #ifdef __GNUC__
 #define NORETURN __attribute__ ((__noreturn__))
