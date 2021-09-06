@@ -18,5 +18,6 @@ void err_exit(const char *format, ...) NORETURN;
 void errExitEN(int errNum, const char *format, ...) NORETURN;
 void fatal(const char *format, ...) NORETURN;
 void cmdLineErr(const char *format, ...) NORETURN;
+void usageErr(const char *format, ...) NORETURN;
 
 #endif //CPPTEST_ERROR_FUNCTIONS_H
